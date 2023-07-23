@@ -1,0 +1,2 @@
+# Curiosities
+Funky personal projects
