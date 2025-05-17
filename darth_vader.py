@@ -3,7 +3,7 @@
 
 def print_giant_vader():
     """
-    Prints a giant ASCII art 'DARTH VADER' message and Vader's helmet to the console
+    Prints a giant ASCII art 'DARTH VADER' message, Vader's helmet, and an Imperial Star Destroyer to the console
     """
     vader_text = r"""
  /$$$$$$$   /$$$$$$  /$$$$$$$  /$$$$$$$$ /$$   /$$       /$$    /$$  /$$$$$$  /$$$$$$$  /$$$$$$$$ /$$$$$$$  
@@ -42,9 +42,48 @@ def print_giant_vader():
 
      THE FORCE IS STRONG WITH THIS ONE
 """
-    
+
+    # Imperial Star Destroyer ASCII art
+    star_destroyer = r"""
+                                                     ____
+                                          _.-~~    ~~-.
+                                         /            \
+                                        |              |
+                                        |              |
+                                        |              |
+                                        |              |
+                                        |              |
+                                        |              |
+                                        |              |
+                                       _|_            _|_
+                                      /::::\          /::::\
+                                     /::::::\        /::::::\
+                              _..,--\::::::/        \::::::/--,.._ 
+                         ,--~:::::::::::/    _.._    \::::::::::::~--, 
+                        |:::::::::::::/    /:::::\    \::::::::::::::|
+                        |:::::::::::/    /::::::::\    \::::::::::::::| 
+                  ______|::::::::::|____|::::::::::|_____|:::::::::::|______
+                 /      |::::::::::|    |::::::::::|     |:::::::::::|      \
+                /       |..........|....|..........|.....|...........|       \
+               /_________|_______|________|_______|________|_________|_________\
+              /                                                                  \
+             /      __|__|__|__|__|__|__|__|__|__|__|__|__|__|__|__|__|__        \
+            /      /                                                      \        \
+           /     _/                      --------                         \_        \
+          /    _/                                                           \_       \
+         /    /                                                               \       \
+         |   |                              _______                            |      |
+         |___|____________________|__|__|__|__|__|__|__|__|__|__|__|__|__|__|__|______|
+
+                           IMPERIAL STAR DESTROYER
+                        "YOU MAY FIRE WHEN READY"
+"""
+
+    # Print all the art in sequence
     print(vader_text)
     print(vader_helmet)
+    print("\n")  # Add some spacing between Vader and the Star Destroyer
+    print(star_destroyer)
 
 if __name__ == "__main__":
     print_giant_vader()
