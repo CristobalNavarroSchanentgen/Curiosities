@@ -11,6 +11,126 @@ imperial_march() {
     sleep 1
 }
 
+# Blaster firing animation
+blaster_fire() {
+    echo "Blaster firing!"
+    
+    # Frame 1
+    clear
+    cat << 'EOF'
+    |
+    |
+    |===========>
+    |
+    |
+EOF
+    sleep 0.15
+    
+    # Frame 2
+    clear
+    cat << 'EOF'
+    |
+    |
+    |=============>
+    |
+    |
+EOF
+    sleep 0.15
+    
+    # Frame 3
+    clear
+    cat << 'EOF'
+    |
+    |
+    |==============>     *
+    |
+    |
+EOF
+    sleep 0.15
+    
+    # Frame 4
+    clear
+    cat << 'EOF'
+    |
+    |
+    |==============>         *
+    |
+    |
+EOF
+    sleep 0.15
+    
+    # Frame 5
+    clear
+    cat << 'EOF'
+    |
+    |
+    |==============>              *
+    |
+    |
+EOF
+    sleep 0.15
+    
+    # Frame 6
+    clear
+    cat << 'EOF'
+    |
+    |
+    |==============>                  *
+    |
+    |
+EOF
+    sleep 0.15
+    
+    # Frame 7
+    clear
+    cat << 'EOF'
+    |
+    |
+    |==============>                      *
+    |
+    |
+EOF
+    sleep 0.15
+    
+    # Frame 8
+    clear
+    cat << 'EOF'
+    |
+    |
+    |==============>                          * 
+    |
+    |
+EOF
+    sleep 0.15
+    
+    # Frame 9
+    clear
+    cat << 'EOF'
+    |
+    |
+    |==============>                              *
+    |
+    |
+EOF
+    sleep 0.15
+    
+    # Frame 10 - Impact!
+    clear
+    cat << 'EOF'
+    |
+    |
+    |==============>                                  ✧ ✦ ✧
+    |                                               ✦     ✦
+    |                                                 ✧ ✦
+EOF
+    sleep 0.2
+    
+    # Sound effect
+    echo "PSHEWW!"
+    sleep 0.5
+    clear
+}
+
 # Clear the screen for dramatic effect
 clear
 
@@ -52,4 +172,13 @@ fi
 sleep 1
 echo ""
 echo "\"I find your lack of faith disturbing.\""
+echo ""
+
+# Fire blaster after the quote
+sleep 1
+blaster_fire
+
+# Final message
+echo ""
+echo "The Empire strikes back!"
 echo ""
