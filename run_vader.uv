@@ -1,0 +1,55 @@
+#!/bin/sh
+# run_vader.uv - UV script to run darth_vader.py and display the Darth Vader ASCII art
+
+# Set terminal to dark mode (for the dark side of the Force)
+export TERM=xterm-256color
+
+# Imperial March sound effect (text-based)
+imperial_march() {
+    echo "Playing Imperial March (text version)..."
+    echo "DUN DUN DUN, DUN DA-DUN, DUN DA-DUN"
+    sleep 1
+}
+
+# Clear the screen for dramatic effect
+clear
+
+# Optional dramatic intro
+echo "A long time ago in a galaxy far, far away...."
+sleep 1
+clear
+
+# Dramatic effect with "stars"
+for i in $(seq 1 5); do
+    clear
+    echo "* . * . * . * . * . * . * . * . * . *"
+    sleep 0.2
+    clear
+    echo " . * . * . * . * . * . * . * . * . *"
+    sleep 0.2
+done
+
+# Clear one more time before the main event
+clear
+
+# Play the Imperial March (text version)
+imperial_march
+
+# Run the Darth Vader Python script
+if command -v python3 > /dev/null 2>&1; then
+    # Run with Python 3
+    python3 "$(dirname "$0")/darth_vader.py"
+elif command -v python > /dev/null 2>&1; then
+    # Fallback to python if python3 is not available
+    python "$(dirname "$0")/darth_vader.py"
+else
+    echo "Error: Python is not installed or not in the PATH."
+    echo "The Dark Side finds your lack of Python disturbing."
+    exit 1
+fi
+
+# Vader quote
+sleep 1
+echo ""
+echo "\"I find your lack of faith disturbing.\""
+echo ""
